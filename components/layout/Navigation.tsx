@@ -69,7 +69,7 @@ export function Navigation() {
             alt="San Patrik"
             width={140}
             height={44}
-            style={{ height: '44px', width: 'auto' }}
+            className="h-10 w-auto"
             priority
           />
         </a>
