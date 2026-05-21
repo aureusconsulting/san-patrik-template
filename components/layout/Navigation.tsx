@@ -1,45 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { gtmEvents } from '@/lib/gtm';
-
-// ─── Inline SVG primitives ────────────────────────────────────────────────────
-
-function LogoSVG() {
-  return (
-    <svg
-      width="148"
-      height="44"
-      viewBox="0 0 148 44"
-      fill="none"
-      aria-label="Petram Resort & Residences by San Patrik"
-    >
-      <text
-        x="0"
-        y="22"
-        fontFamily="'Cormorant Garamond', Georgia, serif"
-        fontSize="24"
-        fontWeight="300"
-        fill="#C8A96E"
-        letterSpacing="5"
-      >
-        PETRAM
-      </text>
-      <text
-        x="1"
-        y="38"
-        fontFamily="'Montserrat', system-ui, sans-serif"
-        fontSize="7.5"
-        fontWeight="400"
-        fill="#F5F3EF"
-        letterSpacing="4"
-        opacity="0.65"
-      >
-        SAN PATRIK
-      </text>
-    </svg>
-  );
-}
 
 function PhoneIcon() {
   return (
@@ -99,9 +62,16 @@ export function Navigation() {
         <a
           href="/"
           className="flex-shrink-0"
-          aria-label="Petram Resort — home"
+          aria-label="San Patrik — home"
         >
-          <LogoSVG />
+          <Image
+            src="/images/logos/san-patrik-logo.png"
+            alt="San Patrik"
+            width={140}
+            height={44}
+            style={{ height: '44px', width: 'auto' }}
+            priority
+          />
         </a>
 
         {/* Phone — desktop center */}
