@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { gtmEvents } from '@/lib/gtm';
 
@@ -64,13 +63,11 @@ export function Navigation() {
           className="flex-shrink-0"
           aria-label="San Patrik — home"
         >
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/images/logos/san-patrik-logo.png"
             alt="San Patrik"
-            width={140}
-            height={44}
             className="h-10 w-auto"
-            priority
           />
         </a>
 
